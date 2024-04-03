@@ -2,71 +2,69 @@
 id: mr1v7w28j0iqezha4nvfklm
 title: The Basics
 desc: ''
-updated: 1712157177973
+updated: 1712159003226
 created: 1712154758094
 ---
 
-# Expressions & Statements
+## Expressions & Statements
 
+- Expression: fragment representing a single value
+  - evaluation: determining the value of an expression
+- Statement: complete "sentence" - an instruction for the computer
+  - e.g. alert("Hello World!");
+    - instructs browser to display a dialogue box with the message "Hello World"
+  - Expression -> statement: semi-colon at the end
 
-# Numbers & Operators
+## Numbers & Operators
 
-## Order of Operations
+### Order of Operations
 
-## Floating Point
+### Floating Point
 
+## Bindings
 
-# Bindings
+### Variables
 
-## Variables
+### Constants
 
-## Constants
+### Naming Conventions
 
-## Naming Conventions
+## Incrementing & Decrementing
 
+### Addition & Subtraction Assignment
 
-# Incrementing & Decrementing
+### Multiplication & Division Assignment
 
-## Addition & Subtraction Assignment
+## Strings
 
-## Multiplication & Division Assignment
+### Joining Strings
 
+### Finding the Length of a String
 
-# Strings
+### Getting a Character from a String
 
-## Joining Strings
+### Getting Multiple Characters from a String
 
-## Finding the Length of a String
+### Trimming Whitespace from a String
 
-## Getting a Character from a String
+### Other Useful String Methods
 
-## Getting Multiple Characters from a String
+## Escape Sequences
 
-## Trimming Whitespace from a String
+## Template Literals
 
-## Other Useful String Methods
+## Undefined & Null
 
+## Booleans
 
-# Escape Sequences
+### Logical Operators
 
+### Comparison Operators
 
-# Template Literals
+## Type Coercion
 
+### Equality with Coercion
 
-# Undefined & Null
+### Truthiness
 
-
-# Booleans
-
-## Logical Operators
-
-## Comparison Operators
-
-
-# Type Coercion
-
-## Equality with Coercion
-
-## Truthiness
-
-## Uses for Truthiness
+### Uses for Truthiness
