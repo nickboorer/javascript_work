@@ -2,7 +2,7 @@
 id: mr1v7w28j0iqezha4nvfklm
 title: The Basics
 desc: ''
-updated: 1712161081121
+updated: 1712161960662
 created: 1712154758094
 ---
 
@@ -59,9 +59,33 @@ e.g.:
 
 ### Constants
 
-
+- keyword: const
+    const PI = 3.14592653589793; - unlike variables, you have to assign constant value upon declaration
+    >> undefined
+    - use this constant to calculate circumference of a given circle:
+    let diameter = 3; - create variable and assign value of three
+    >>undefined - remember it will stick to the  convention...
+    let circumference = diameter * PI; create variable and assign value of the const PI and the var diameter (compound expression including
+    a constant, a variable, and an mathematical operator)
+    >>undefined
+    circumference - obtain the variable's value by calling it
+    >>9.42477796076938
 
 ### Naming Conventions
+
+- descriptive names - clear what they represent
+- case sensitive: ID != id or Id or iD
+
+### Variable Names
+
+- convention is camel case
+- snake case as an alternative (slightly clearer but much harder to type)
+
+### Constant Names
+
+- True constants (will never change whenever the program runs - eg. PI, hours in a day etc)
+    - All caps snake case: PI, HOURS_IN_A_DAY
+- Otherwise same convention as variables
 
 ## Incrementing & Decrementing
 
