@@ -2,7 +2,7 @@
 id: mr1v7w28j0iqezha4nvfklm
 title: The Basics
 desc: ''
-updated: 1712160723644
+updated: 1712161081121
 created: 1712154758094
 ---
 
@@ -10,7 +10,7 @@ created: 1712154758094
 
 - Expression: fragment representing a single value
   - evaluation: determining the value of an expression
-  - Compound expression: composed of two or more expressions
+  - Compound expression: composed of two or more expressions (such as when using operators)
   - literal: direct representation of fixed value
     - number literal: a number in code
   - operator: symbol to manipulate expressions
@@ -49,8 +49,17 @@ e.g.:
 
 - assignment:
     age = 35;
+- initialization: assignment for the first time
+  - usually done at the same time as creation:
+    let age = 35;
+    >>undefined - the convention that the let statement has no value remains
+    - check by calling the variable:
+    age;
+    >>35
 
 ### Constants
+
+
 
 ### Naming Conventions
 
