@@ -2,7 +2,7 @@
 id: mr1v7w28j0iqezha4nvfklm
 title: The Basics
 desc: ''
-updated: 1712251001624
+updated: 1712328590629
 created: 1712154758094
 ---
 
@@ -166,7 +166,7 @@ price; //evaluate new price - output: 25
 - The same idea works with multiplication and division:
 
 ```js
-let tribbles = 6; //initialize variable tribble with value of 20
+let tribbles = 6; //initialize variable tribbles with value of 20
 tribbles *=2; //set new value by multiplying initial value by 2
 tribbles; //evaluate new value: 12
 tribbles /=3; //set new value by dividing value of 12 by 3;
@@ -264,20 +264,343 @@ inputText; //still evaluates to ' Here is my input   ' because the variable hasn
 
 ## Escape Sequences
 
+- may need special characters in a string:
+  - line breaks
+  - tabs
+- include these by using break characters:
+  - always start with a backslash:
+    - "\n" - new line
+
+```js
+let hello = "Hello\nWorld";
+console.log(hello)
+/*output:
+Hello
+World*/
+```
+
+Other escape sequences:
+
+- \' - Single quote
+- /" - Double quote
+- \\ - Backslash
+- \n - New line
+- \t - Tab
+
+```js
+console.log("This string has \"double quotes\" and a \\ backslash character");
+//output: This string has "double quotes" and a \ backslash character
+```
+
+You don't need to escape single quotes in a string inside double quotes and likewise for double quotes in a string inside single quotes
+
 ## Template Literals
+
+- Special string that evaluates the expression inside it
+  - allows dynamic string values
+- contained within backticks (`) (not quotation marks)
+- use placeholder syntax: ${}
+  - text inside the braces is treated as an expression
+    - evaluated before the final string is evaluated
+
+```js
+let name = "Nick";
+`Hello, ${name}!`;
+//output 'Hello, Nick'
+
+name = 'Dolly';
+`Hello, ${name}!`;
+//output: 'Hello Dolly!
+```
+
+- Any expression can be included between the braces:
+
+```js
+`There are ${60*60*24} seconds in a day`;
+//output: 'There are 86400 seconds in a day'
+```
+
+- Useful for:
+  - taking input and inserting into the string
+  - building a string from several variables:
+
+```js
+let noun = "moon";
+let adverb = "strangely";
+let adjective = "red";
+//without template literals:
+"The " + noun + "was " + adverb + adjective + ".";
+// 'The moon was strangely red.'
+`The ${noun} was ${adverb} ${adjective}.`;
+// 'The moon was strangely red.'
+```
+
+- template literals make it much easier to read and understand that custom values are being inserted.
 
 ## Undefined & Null
 
+- values 'undefined' and 'null' represent 'nothing
+
+- JS has no value for something: 'undefined':
+
+```js
+let nothing;
+nothing;
+//undefined (we have assigned no value to the variable 'nothing')
+```
+
+- also returned when a function has no useful value to return in the console:
+
+```js
+alert("I have no value");
+//undefined (although the function creates a pop up alert, there is no value it can return in the console)
+```
+
+- 'null' is used when programmers explicitly mark something as empty or having no value:
+
+```js
+let address = null;
+address;
+//null
+```
+
+- no functional difference but makes intentions clear - deliberately stating that it is an empty value rather than something you haven't defined yet
+
 ## Booleans
+
+- True or false
+  - a way to talk about logic - enabling programme to behave differently in different conditions
+  - supported by logical operators and comparison operators
 
 ### Logical Operators
 
+- and: && - returns true only if both operands are true
+- or: || - returns true if either operand is true
+- not: ! - only takes one operand and reverses its value
+
+```js
+let powerup = true;
+let jumping = true;
+powerup && jumping;
+//true - because both of the operands are set to true
+```
+
+```js
+jumping = false;
+powerup && jumping;
+//false - because one of the operands (jumping) ias now false
+```
+
+```js
+let hitByFireball = false;
+let touchedMonster = true;
+hitByFireball || touchedMonster;
+//true - because one of the operands (touchedMonster) is true
+```
+
+```js
+let alive = false;
+!alive;
+//true - because the ! returns the inverse of the operand it is attached to
+```
+
+```js
+let carryingBox = true;
+let swimming = false;
+!carryingBox && !swimming;
+//false - not swimming but carrying box so one of the conditions - to not be carrying a box - is not fulfilled
+```
+
+- the final expression evaluates as follows:
+  - !true && !false
+  - false && true
+    - one of the value is false, so the && returns false
+
+- useful trick:
+
+```js
+!a && !b; //not a and not b
+//can be rewritten as:
+!(a || b); //not (a or b) - the part in the parentheses evaluates first
+!(a && b); //not (a and b) instead of;
+!a || b; //not a or not b
+```
+
 ### Comparison Operators
+
+- return true or false based on result of comparison
+
+- === - checks whether two values are equal; returns true if they are, false if they aren't
+- !== - checks whether two values are NOT equal; returns true if they aren't, false if they are
+
+```js
+5 === 5; //true
+6 === 7; //false
+2 + 2 === 4; //true
+"hello" === "goodbye"; //false
+"hello" === "hel" + "lo"; //true
+false === false; //true
+true === false; //false
+```
+
+```js
+let answer = 2 + 2;
+answer === 5; //false
+answer === 4; //true
+```
+
+```js
+8 !== 8; //false
+"apples" !== "oranges"; //true
+// same as:
+!(8 === 8) //false
+!("apples" === "oranges") //true
+```
+
+- > greater than
+- < less than
+- => greater than or equal to
+- <= less than or equal to
+
+```js
+1 > -1; //true
+10 > 10; //false
+10 >= 10; //true
+-1 < 1; //true
+10 < 10; //false
+10 <= 10; //true
+```
+
+- when comparing strings this is basically done alphabetically and stops as soon as a difference is found:
+
+```js
+"cat" < "dog"; //true - because cat would appear before dog in a dictionary
+"abc" > "abbcdef" /*true - the third letter c in the first string is after the third letter b in the second string 
+- length is irrelevant here because the comparison has already stopped at the third character*/
+```
 
 ## Type Coercion
 
+- automatic conversion of value from one data type to another
+  - where different data types appear in the same expression and can't be evaluated
+  - e.g. string + number
+
+```js
+"Current score: " + 10; //JavaScript coerces the 10 to a string and then concatenates
+//'Current score: 10' (a string can't be coerced to a number - it would be senseless)
+```
+
+- booleans coerced to numbers (true = 1, false = 0):
+
+```js
+100 + true;
+//101
+```
+
 ### Equality with Coercion
+
+- == double equals (rather than the triple equals above)
+  - applies coercion to the operands
+
+```js
+0 == false; //coerces the Boolean to a number (0 === 0)
+//true
+0 === false; //Boolean not coerced so no equality
+//false
+```
+
+- what will be coerced can be hard to guess:
+
+```js
+"1" == 1; //true - string of a number is coerced to equivalent number 
+undefined == null; //true
+undefined == false; //false
+"" == 0; //true
+"" == false; //true
+```
+
+- != - opposite of ==
+  - determines whether the operands are not equal after coercion:
+
+```js
+0 !== false;
+//true -  without coercion, 0 is not equal to false
+0 != false;
+//false - after coercion of he boolean to 0, the statement that 0 is not equal to 0 is false
+```
+
+- the unpredictability of using the coercive operators means they should be avoided if possible
 
 ### Truthiness
 
+- defines how non-Booleans can be treated as Booleans
+  - allowing use of logical operators with any type of value
+- truthy - equivalent to true: all non-zero numbers and non-empty strings
+- falsy - equivalent to false: undefined, null, 0, and empty strings
+
+- check truthiness with two not operators: !! (not not)
+  - ! always returns a Boolean, whatever the data type
+
+
+```js
+!0 // ! coerces the 0 to a Boolean (false) and inverts it
+//true
+!!0 // the second ! inverts the Boolean again (false), giving the Boolean of the original value
+!!1;
+//true - non-zero number
+!!"hi";
+//true - non-empty string
+!!"";
+//false - empty string
+!!undefined;
+//false
+!!null;
+//false
+```
+
+- && and || applied to non-Booleans don't return a Boolean
+  - return one of the original operands
+- &&: 
+  - if first operand truthy, second operand returned
+  - if first operand falsy, first operand returned
+- ||:
+  - if first operand truthy, first operand returned
+  - if first operand falsy, second operand returned
+
+```js
+15 && 17;
+//17
+0 && 20;
+//0
+undefined && null;
+//undefined
+"" || "hello"; //first operand falsy (empty string) so second operand returned
+//'hello'
+"hello" || "goodbye" //first operand truthy (non-empty string) so first operand returned
+//'hello'
+```
+
 ### Uses for Truthiness
+
+- providing a default value to a variable if non supplied (maybe a missed entry on a form):
+
+```js
+let name;
+name = name || "No name provided"; //name is falsy
+name; //second operand returned as default
+//'No name provided'
+```
+
+- && to short circuit an expression - to decide whether or not to run some code:
+
+```js
+let score = 0;
+score && alert(`Your score is ${score}!`); //if the score is zero, then the alert is not evaluated at all
+0 //no alert is displayed
+//score goes up:
+++score;
+//1 - added one to the score
+score && alert(`Your score is ${score}!`); //score is now truthy so the second operand is evaluated
+//undefined (there is no useable console value returned from the expression) 
+//alert displayed in a dialogue box saying "This page says Your score is 1!
+```
