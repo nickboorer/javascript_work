@@ -2,7 +2,7 @@
 id: mr1v7w28j0iqezha4nvfklm
 title: The Basics
 desc: ''
-updated: 1712328590629
+updated: 1712328707068
 created: 1712154758094
 ---
 
@@ -541,7 +541,6 @@ undefined == false; //false
 - check truthiness with two not operators: !! (not not)
   - ! always returns a Boolean, whatever the data type
 
-
 ```js
 !0 // ! coerces the 0 to a Boolean (false) and inverts it
 //true
@@ -560,7 +559,7 @@ undefined == false; //false
 
 - && and || applied to non-Booleans don't return a Boolean
   - return one of the original operands
-- &&: 
+- &&:
   - if first operand truthy, second operand returned
   - if first operand falsy, first operand returned
 - ||:
