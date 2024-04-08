@@ -1,5 +1,10 @@
-# Conditionals and Loops
-
+---
+id: pd7aw62mfzygyjylgkd29os
+title: Conditionals & Loops
+desc: ''
+updated: 1712598726240
+created: 1712598672389
+---
 Adding logic and structure to programs:
 
 - "Control Structures"
