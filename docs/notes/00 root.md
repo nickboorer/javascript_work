@@ -5,6 +5,7 @@ desc: ''
 updated: 1712154327284
 created: 1712154327284
 ---
+
 # Welcome to my JavaScript Learning Vault
 
 ## Lookup
