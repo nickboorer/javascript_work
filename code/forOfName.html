@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            let name = "Nicholas";
+
+            //4-2 Write a for...of loop to loop over your name, printing each letter on a separate line
+            for(let letter of name) {
+                console.log(`${letter}\n`);
+            }
+
+            //4-3 use the entries method with a for...of loop to print each letter from your name followed by a space and its index number on each line
+            let nameArray = name.split("").entries(); //create array from name
+
+            for(let[index, item] of nameArray) {
+                console.log(`${item} ${index}`);
+            }
+
+            //4-4 achieve the same output as 4-3 using a standard for loop
+            for (let i = 0; i < name.length; i++) {
+                console.log(`${name[i]} ${i}`);
+            }
+        </script>
+    </body>
+</html>
