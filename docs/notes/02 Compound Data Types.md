@@ -1,6 +1,6 @@
 ---
 id: cilhezepe7hpjdmd0cafetj
-title: Compound Data Types
+title: 02 Compound Data Types
 desc: ''
 updated: 1712597617270
 created: 1712329155586
