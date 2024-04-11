@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            let words = ["zero", "one", "two", "three", "four", "five"];
+            function numWord(num) {
+                return words[num];
+            }
+
+            let numWordExpression = function (num) {
+                return words[num];
+            };
+
+            let numWordArrow = (num) => {
+                return words[num];
+            };
+
+            let numWordArrowConcise = num => words[num];
+        </script>
+    </body>
+</html>
