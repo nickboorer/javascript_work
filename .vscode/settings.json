@@ -3,5 +3,10 @@
         "abbcdef",
         "powerup",
         "tribbles"
+    ],
+    "cSpell.ignoreWords": [
+        "Appender",
+        "favourite",
+        "specialised"
     ]
 }

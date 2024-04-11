@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function makeWrapper(prefix, suffix) {
+                return function (text) {
+                    return prefix + text + suffix;
+                };
+            }
+            let bracketWrapper = makeWrapper("[", "]");
+            bracketWrapper("Bracket me!");
+            let bracesWrapper = makeWrapper("{", "}");
+            bracesWrapper("Brace! Brace!")
+        </script>
+    </body>
+</html>
