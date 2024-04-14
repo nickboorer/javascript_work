@@ -2,7 +2,7 @@
 id: b1wmvxvi7siz4gujx6s6yt5
 title: 07 HTML the DOM and CSS
 desc: ""
-updated: 1713096813447
+updated: 1713097834120
 created: 1712946299586
 ---
 
@@ -103,7 +103,7 @@ heading.innerText = "Hi there...";
 document.querySelectorAll(".highlight"); //to find all elements with the class "highlight"
 //>Nodelist(2) [p.highlight], p.highlight - returns a Nodelist (no. of elements matching selector) [elements]
 
-let strong = document.querySelectorAll(#main-heading strong); // to find all strong elements with a parent element with main-heading ID
+let strong = document.querySelectorAll("#main-heading strong"); // to find all strong elements with a parent element with main-heading ID
 strong;
 //>Nodelist [strong] - only one element matches the selector (so no number returned)
 strong[0].textContent; // get the text of that element (zero-indexing so you need 0 to select the first (and only) element here)
