@@ -1,0 +1,33 @@
+* {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+h1 {
+  color: red;
+  font-style: italic;
+}
+
+#main-heading {
+  /*id selector*/
+  font-size: 48px;
+}
+
+strong {
+  /*class selector*/
+  color: darkblue;
+}
+
+p strong {
+  /*descendant combinator (space) - strong elements that are a descendant of a p*/
+  font-size: 24px;
+}
+
+.highlight {
+  /*class selector*/
+  background-color: bisque;
+}
+
+.highlight strong {
+  /*descendant combinator (space) - strong elements that are a descendant of an element with a highlight class attribute*/
+  background-color: beige;
+}

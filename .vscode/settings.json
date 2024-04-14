@@ -1,18 +1,14 @@
 {
-    "cSpell.words": [
-        "abbcdef",
-        "kiki",
-        "powerup",
-        "proto",
-        "tribbles"
-    ],
-    "cSpell.ignoreWords": [
-        "Appender",
-        "behaviour",
-        "favourite",
-        "fcnnsa",
-        "moona",
-        "rlui",
-        "specialised"
-    ]
+  "cSpell.words": ["abbcdef", "kiki", "powerup", "proto", "tribbles"],
+  "cSpell.ignoreWords": [
+    "Appender",
+    "Nodelist",
+    "behaviour",
+    "favourite",
+    "fcnnsa",
+    "helloworld",
+    "moona",
+    "rlui",
+    "specialised"
+  ]
 }
